@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caixa - Mercado Vila Nova</title>
+  <link rel="icon" href="/imagens/logo.svg">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <a href="index.html" class="marca"><img src="/imagens/logo.svg" alt=""> Mercado Vila Nova</a>
+    <nav>
+      <a href="index.html">Painel</a>
+      <a href="caixa.html" class="ativo">Caixa</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="categorias.html">Categorias</a>
+      <a href="vendas.html">Vendas</a>
+    </nav>
+  </header>
+
+  <main class="conteudo caixa">
+    <section class="caixa-branca">
+      <div class="busca-caixa">
+        <input id="quantidade" type="number" value="1" min="0" step="0.001" title="Quantidade">
+        <div class="campo-busca">
+          <input id="buscaProduto" placeholder="Código de barras ou nome do produto" autocomplete="off" autofocus>
+          <ul id="sugestoes" class="sugestoes"></ul>
+        </div>
+      </div>
+      <p class="dica">
+        Dá pra digitar <code>3*7891000100103</code> pra lançar 3 de uma vez.
+        <kbd>F2</kbd> busca &middot; <kbd>F9</kbd> finaliza &middot; <kbd>Esc</kbd> limpa a busca
+      </p>
+
+      <div class="rolagem">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Produto</th>
+              <th>Qtd</th>
+              <th class="direita">Preço</th>
+              <th class="direita">Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="itensCarrinho"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside class="caixa-branca resumo-caixa">
+      <h2>Total da compra</h2>
+      <div class="total" id="totalVenda">R$ 0,00</div>
+      <p class="info" id="qtdItens">Nenhum item</p>
+
+      <label>Forma de pagamento
+        <select id="formaPagamento">
+          <option value="dinheiro">Dinheiro</option>
+          <option value="debito">Cartão de débito</option>
+          <option value="credito">Cartão de crédito</option>
+          <option value="pix">Pix</option>
+        </select>
+      </label>
+
+      <div id="areaDinheiro">
+        <label>Valor recebido
+          <input id="valorRecebido" type="number" step="0.01" min="0" placeholder="0,00">
+        </label>
+        <p style="margin-top: 8px">Troco: <strong id="troco">R$ 0,00</strong></p>
+      </div>
+
+      <button class="btn grande" id="btnFinalizar">Finalizar venda</button>
+      <button class="btn secundario" id="btnLimpar">Limpar carrinho</button>
+    </aside>
+  </main>
+
+  <script src="js/util.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/caixa.js"></script>
+</body>
+</html>

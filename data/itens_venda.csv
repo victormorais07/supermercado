@@ -1,0 +1,19 @@
+venda_id;produto_id;nome_produto;quantidade;preco_unitario;subtotal
+1;1;Arroz Branco Tipo 1 5kg;1;27.90;27.90
+1;2;Feijão Carioca 1kg;2;8.49;16.98
+1;4;Café Torrado e Moído 500g;1;18.90;18.90
+2;3;Leite Integral 1L;6;5.29;31.74
+2;6;Pão de Forma Tradicional 500g;1;9.49;9.49
+3;5;Banana Prata;1.25;6.99;8.74
+3;9;Ovos Brancos 12 unidades;1;12.90;12.90
+3;14;Açúcar Refinado 1kg;2;4.99;9.98
+4;8;Refrigerante Cola 2L;2;10.99;21.98
+4;15;Água Mineral 1,5L;6;2.99;17.94
+4;7;Detergente Neutro 500ml;3;2.79;8.37
+5;10;Macarrão Espaguete 500g;3;4.59;13.77
+6;3;Leite Integral 1L;4;5.29;21.16
+6;4;Café Torrado e Moído 500g;1;18.90;18.90
+6;6;Pão de Forma Tradicional 500g;1;9.49;9.49
+7;11;Tomate Italiano;0.9;8.90;8.01
+7;1;Arroz Branco Tipo 1 5kg;1;27.90;27.90
+7;16;Papel Higiênico 12 rolos;1;21.90;21.90
