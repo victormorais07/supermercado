@@ -9,6 +9,12 @@ async function api(url, opcoes = {}) {
   const resposta = await fetch('/api' + url, config);
   if (resposta.status === 204) return null;
 
+  // sessão expirou (ou servidor reiniciou), volta pro login
+  if (resposta.status === 401 && url !== '/auth/login') {
+    location.href = '/login.html';
+    return new Promise(() => {});
+  }
+
   const dados = await resposta.json().catch(() => null);
   if (!resposta.ok) {
     const mensagem = dados && (dados.erro || (dados.erros && dados.erros.join('\n')));

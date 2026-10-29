@@ -35,4 +35,20 @@ function validarProduto(dados, idsCategorias) {
   return erros;
 }
 
-module.exports = { validarProduto, UNIDADES };
+function validarUsuario(dados) {
+  const erros = [];
+
+  if (dados.nome.length < 2 || dados.nome.length > 60) {
+    erros.push('Informe o nome (de 2 a 60 caracteres)');
+  }
+  if (!/^[a-z0-9._]{3,20}$/.test(dados.usuario)) {
+    erros.push('Usuário deve ter de 3 a 20 caracteres, só letras sem acento, números, ponto ou _');
+  }
+  if (dados.senha.length < 4) {
+    erros.push('A senha precisa ter pelo menos 4 caracteres');
+  }
+
+  return erros;
+}
+
+module.exports = { validarProduto, validarUsuario, UNIDADES };

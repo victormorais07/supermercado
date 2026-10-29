@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar conta - Mercado Vila Nova</title>
+  <link rel="icon" href="/imagens/logo.svg">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="pagina-login">
+  <form class="cartao-login" id="formCadastro" novalidate>
+    <div class="cabecalho-login">
+      <img src="/imagens/logo.svg" alt="">
+      <h1>Criar conta</h1>
+      <p>Preencha seus dados pra começar a usar</p>
+    </div>
+
+    <div class="corpo-login">
+      <p class="erro-form"></p>
+      <label>Nome
+        <input name="nome" maxlength="60" autocomplete="name" autofocus>
+      </label>
+      <label>Usuário
+        <input name="usuario" maxlength="20" autocomplete="username" autocapitalize="none" placeholder="ex: joao.silva">
+      </label>
+      <label>Senha
+        <input name="senha" type="password" autocomplete="new-password">
+      </label>
+      <label>Confirmar senha
+        <input name="confirmar" type="password" autocomplete="new-password">
+      </label>
+      <button class="btn grande" type="submit">Cadastrar</button>
+      <p class="link-login">Já tem conta? <a href="login.html">Entrar</a></p>
+    </div>
+  </form>
+
+  <script src="js/util.js"></script>
+  <script src="js/api.js"></script>
+  <script>
+    const form = document.getElementById('formCadastro');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const dados = Object.fromEntries(new FormData(form));
+
+      if (dados.senha !== dados.confirmar) {
+        erroNoForm(form, 'As senhas não são iguais');
+        return;
+      }
+      delete dados.confirmar;
+
+      try {
+        await api('/auth/cadastro', { method: 'POST', body: dados });
+        location.href = '/'; // já entra logado
+      } catch (err) {
+        erroNoForm(form, err.message);
+      }
+    });
+  </script>
+</body>
+</html>

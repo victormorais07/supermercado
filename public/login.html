@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar - Mercado Vila Nova</title>
+  <link rel="icon" href="/imagens/logo.svg">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="pagina-login">
+  <form class="cartao-login" id="formLogin" novalidate>
+    <div class="cabecalho-login">
+      <img src="/imagens/logo.svg" alt="">
+      <h1>Mercado Vila Nova</h1>
+      <p>Entre com seu usuário pra acessar o sistema</p>
+    </div>
+
+    <div class="corpo-login">
+      <p class="erro-form"></p>
+      <label>Usuário
+        <input name="usuario" autocomplete="username" autocapitalize="none" autofocus>
+      </label>
+      <label>Senha
+        <input name="senha" type="password" autocomplete="current-password">
+      </label>
+      <button class="btn grande" type="submit">Entrar</button>
+      <p class="link-login">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </div>
+  </form>
+
+  <script src="js/util.js"></script>
+  <script src="js/api.js"></script>
+  <script>
+    const form = document.getElementById('formLogin');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const dados = Object.fromEntries(new FormData(form));
+      if (!dados.usuario || !dados.senha) {
+        erroNoForm(form, 'Preencha usuário e senha');
+        return;
+      }
+
+      const botao = form.querySelector('button');
+      botao.disabled = true;
+      try {
+        await api('/auth/login', { method: 'POST', body: dados });
+        location.href = '/';
+      } catch (err) {
+        erroNoForm(form, err.message);
+        form.elements.senha.value = '';
+        form.elements.senha.focus();
+        botao.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -482,6 +482,60 @@ dialog::backdrop { background: rgba(20, 30, 20, .45); }
 .aviso.mostrar { opacity: 1; transform: none; }
 .aviso.erro { background: var(--vermelho); }
 
+/* ---------- login / cadastro ---------- */
+
+.pagina-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.cartao-login {
+  width: 100%;
+  max-width: 380px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+.cabecalho-login {
+  background: var(--verde);
+  color: #fff;
+  text-align: center;
+  padding: 26px 20px 20px;
+}
+
+.cabecalho-login img { width: 56px; height: 56px; }
+.cabecalho-login h1 { font-size: 22px; margin: 8px 0 4px; }
+.cabecalho-login p { margin: 0; font-size: 14px; color: #dcefdd; }
+
+.corpo-login {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.corpo-login .erro-form { margin: 0; }
+.link-login { text-align: center; font-size: 14px; margin: 0; color: var(--cinza); }
+.link-login a { color: var(--verde); font-weight: 600; }
+
+/* usuário logado no topo */
+.usuario-logado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.form-grid.colunas-4 { grid-template-columns: repeat(4, 1fr); }
+.tag.admin { background: #fff4d6; color: #8a5a00; }
+
 /* ---------- celular ---------- */
 
 @media (max-width: 860px) {
@@ -492,5 +546,5 @@ dialog::backdrop { background: rgba(20, 30, 20, .45); }
   .filtros input[type="search"] { grid-column: 1 / -1; }
   .painel-grid, .caixa { grid-template-columns: 1fr; }
   .resumo-caixa { position: static; }
-  .form-grid { grid-template-columns: 1fr; }
+  .form-grid, .form-grid.colunas-4 { grid-template-columns: 1fr; }
 }
