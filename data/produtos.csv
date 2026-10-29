@@ -1,0 +1,17 @@
+id;codigo_barras;nome;categoria_id;preco;estoque;estoque_minimo;unidade;imagem;ativo;criado_em
+1;7896006716112;Arroz Branco Tipo 1 5kg;1;27.90;32;10;UN;produtos/arroz.svg;1;2026-10-20
+2;7896006744115;Feijão Carioca 1kg;1;8.49;39;15;UN;produtos/feijao.svg;1;2026-10-20
+3;7891000100103;Leite Integral 1L;3;5.29;8;24;UN;produtos/leite.svg;1;2026-10-20
+4;7896005800018;Café Torrado e Moído 500g;1;18.90;20;10;UN;produtos/cafe.svg;1;2026-10-20
+5;;Banana Prata;2;6.99;17.15;5;KG;produtos/banana.svg;1;2026-10-21
+6;7896002301428;Pão de Forma Tradicional 500g;4;9.49;10;8;UN;produtos/pao.svg;1;2026-10-21
+7;7891024134702;Detergente Neutro 500ml;6;2.79;57;20;UN;produtos/detergente.svg;1;2026-10-21
+8;7894900011517;Refrigerante Cola 2L;5;10.99;3;12;UN;produtos/refrigerante.svg;1;2026-10-22
+9;7898215151708;Ovos Brancos 12 unidades;1;12.90;24;10;UN;produtos/ovos.svg;1;2026-10-22
+10;7896022204051;Macarrão Espaguete 500g;1;4.59;47;15;UN;produtos/macarrao.svg;1;2026-10-22
+11;;Tomate Italiano;2;8.90;8.85;5;KG;;1;2026-10-23
+12;7891000053508;Creme de Leite 200g;3;3.99;30;10;UN;;1;2026-10-23
+13;7891150005266;Sabonete 85g;7;2.49;4;10;UN;;1;2026-10-24
+14;7896004000853;Açúcar Refinado 1kg;1;4.99;36;15;UN;;1;2026-10-24
+15;7894321711263;Água Mineral 1,5L;5;2.99;66;24;UN;;1;2026-10-25
+16;7891035800209;Papel Higiênico 12 rolos;7;21.90;13;6;UN;;1;2026-10-25
