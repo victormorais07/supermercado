@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendas - Mercado Vila Nova</title>
+  <link rel="icon" href="/imagens/logo.svg">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <a href="index.html" class="marca"><img src="/imagens/logo.svg" alt=""> Mercado Vila Nova</a>
+    <nav>
+      <a href="index.html">Painel</a>
+      <a href="caixa.html">Caixa</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="categorias.html">Categorias</a>
+      <a href="vendas.html" class="ativo">Vendas</a>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <div class="titulo-pagina">
+      <h1>Histórico de vendas</h1>
+    </div>
+
+    <div class="filtros">
+      <label>De <input type="date" id="dataInicio"></label>
+      <label>Até <input type="date" id="dataFim"></label>
+      <label>Status
+        <select id="filtroStatus">
+          <option value="">Todas</option>
+          <option value="concluida">Concluídas</option>
+          <option value="cancelada">Canceladas</option>
+        </select>
+      </label>
+      <button class="btn" id="btnFiltrar" style="align-self: end">Filtrar</button>
+    </div>
+
+    <p class="info" id="resumoPeriodo"></p>
+
+    <div class="caixa-branca rolagem">
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Data</th>
+            <th>Itens</th>
+            <th>Pagamento</th>
+            <th class="direita">Total</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tabelaVendas"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <dialog id="modalVenda">
+    <h2 id="tituloVenda">Venda</h2>
+    <p class="info" id="infoVenda"></p>
+    <div class="rolagem">
+      <table class="tabela compacta">
+        <thead>
+          <tr><th>Produto</th><th class="direita">Qtd</th><th class="direita">Preço</th><th class="direita">Subtotal</th></tr>
+        </thead>
+        <tbody id="itensVenda"></tbody>
+      </table>
+    </div>
+    <p id="totaisVenda" style="text-align: right"></p>
+    <div class="acoes">
+      <button class="btn perigo" id="btnCancelarVenda">Cancelar venda</button>
+      <button class="btn secundario" data-fechar>Fechar</button>
+    </div>
+  </dialog>
+
+  <script src="js/util.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/vendas.js"></script>
+</body>
+</html>
