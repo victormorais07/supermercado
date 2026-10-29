@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorias - Mercado Vila Nova</title>
+  <link rel="icon" href="/imagens/logo.svg">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <a href="index.html" class="marca"><img src="/imagens/logo.svg" alt=""> Mercado Vila Nova</a>
+    <nav>
+      <a href="index.html">Painel</a>
+      <a href="caixa.html">Caixa</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="categorias.html" class="ativo">Categorias</a>
+      <a href="vendas.html">Vendas</a>
+    </nav>
+  </header>
+
+  <main class="conteudo" style="max-width: 760px">
+    <div class="titulo-pagina">
+      <h1>Categorias</h1>
+    </div>
+
+    <form class="form-inline" id="formCategoria">
+      <input name="nome" placeholder="Nome da nova categoria" maxlength="40" required>
+      <button class="btn" type="submit">Adicionar</button>
+    </form>
+
+    <div class="caixa-branca">
+      <table class="tabela">
+        <thead>
+          <tr><th>Nome</th><th class="direita">Produtos</th><th></th></tr>
+        </thead>
+        <tbody id="tabelaCategorias"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="js/util.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/categorias.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="24" fill="#f7efe8"/>
+  <path d="M60 38 h80 l8 14 v118 a8 8 0 0 1 -8 8 h-80 a8 8 0 0 1 -8 -8 v-118 z" fill="#8d4f2c"/>
+  <rect x="52" y="52" width="96" height="8" fill="#6e3a1e"/>
+  <rect x="66" y="96" width="68" height="62" rx="30" fill="#f5e6d8"/>
+  <g fill="#a8643a">
+    <ellipse cx="86" cy="116" rx="9" ry="6" transform="rotate(-20 86 116)"/>
+    <ellipse cx="108" cy="112" rx="9" ry="6" transform="rotate(15 108 112)"/>
+    <ellipse cx="96" cy="132" rx="9" ry="6" transform="rotate(30 96 132)"/>
+    <ellipse cx="118" cy="134" rx="9" ry="6" transform="rotate(-10 118 134)"/>
+    <ellipse cx="82" cy="140" rx="9" ry="6" transform="rotate(5 82 140)"/>
+  </g>
+  <text x="100" y="84" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">FEIJÃO</text>
+</svg>

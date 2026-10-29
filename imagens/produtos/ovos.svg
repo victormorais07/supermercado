@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="24" fill="#f6f1ea"/>
+  <g fill="#fffaf2" stroke="#e5d9c6" stroke-width="2">
+    <ellipse cx="56" cy="96" rx="15" ry="20"/>
+    <ellipse cx="86" cy="92" rx="15" ry="20"/>
+    <ellipse cx="116" cy="96" rx="15" ry="20"/>
+    <ellipse cx="146" cy="92" rx="15" ry="20"/>
+  </g>
+  <path d="M30 104 h140 l-8 52 a8 8 0 0 1 -8 7 h-108 a8 8 0 0 1 -8 -7z" fill="#b7a58a"/>
+  <g fill="#a08d72">
+    <path d="M42 112 q14 12 28 0 v40 h-28z"/>
+    <path d="M72 112 q14 12 28 0 v40 h-28z"/>
+    <path d="M102 112 q14 12 28 0 v40 h-28z"/>
+    <path d="M132 112 q14 12 28 0 v40 h-28z"/>
+  </g>
+  <text x="100" y="144" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fffaf2" text-anchor="middle">12 OVOS</text>
+</svg>

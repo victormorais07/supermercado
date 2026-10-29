@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos - Mercado Vila Nova</title>
+  <link rel="icon" href="/imagens/logo.svg">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <a href="index.html" class="marca"><img src="/imagens/logo.svg" alt=""> Mercado Vila Nova</a>
+    <nav>
+      <a href="index.html">Painel</a>
+      <a href="caixa.html">Caixa</a>
+      <a href="produtos.html" class="ativo">Produtos</a>
+      <a href="categorias.html">Categorias</a>
+      <a href="vendas.html">Vendas</a>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <div class="titulo-pagina">
+      <h1>Produtos</h1>
+      <button class="btn" id="btnNovo">+ Novo produto</button>
+    </div>
+
+    <div class="filtros">
+      <input type="search" id="busca" placeholder="Buscar por nome ou código de barras...">
+      <select id="filtroCategoria">
+        <option value="">Todas as categorias</option>
+      </select>
+      <select id="ordem">
+        <option value="nome">Ordenar por nome</option>
+        <option value="preco">Ordenar por preço</option>
+        <option value="estoque">Ordenar por estoque</option>
+      </select>
+      <label class="check"><input type="checkbox" id="soEstoqueBaixo"> Só estoque baixo</label>
+    </div>
+
+    <p class="info" id="contador"></p>
+    <div class="grade-produtos" id="listaProdutos"></div>
+  </main>
+
+  <!-- cadastro / edição -->
+  <dialog id="modalProduto">
+    <form id="formProduto" novalidate>
+      <h2 id="tituloModal">Novo produto</h2>
+      <p class="erro-form"></p>
+      <input type="hidden" name="produtoId">
+
+      <label>Nome
+        <input name="nome" maxlength="80" required>
+      </label>
+
+      <div class="form-grid">
+        <label>Código de barras
+          <input name="codigo_barras" inputmode="numeric" maxlength="14" placeholder="opcional">
+        </label>
+        <label>Categoria
+          <select name="categoria_id"></select>
+        </label>
+        <label>Preço (R$)
+          <input name="preco" type="number" step="0.01" min="0" required>
+        </label>
+        <label>Vendido por
+          <select name="unidade">
+            <option value="UN">Unidade</option>
+            <option value="KG">Quilo (kg)</option>
+            <option value="L">Litro</option>
+            <option value="CX">Caixa</option>
+          </select>
+        </label>
+        <label id="labelEstoque">Estoque inicial
+          <input name="estoque" type="number" step="0.001" min="0" value="0">
+        </label>
+        <label>Estoque mínimo
+          <input name="estoque_minimo" type="number" step="0.001" min="0" value="5">
+        </label>
+      </div>
+
+      <div class="form-imagem">
+        <label>Imagem
+          <select name="imagem" id="selectImagem">
+            <option value="">(sem imagem)</option>
+          </select>
+        </label>
+        <img id="previewImagem" src="/imagens/sem-imagem.svg" alt="">
+      </div>
+
+      <div class="acoes">
+        <button type="button" class="btn secundario" data-fechar>Cancelar</button>
+        <button type="submit" class="btn">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- entrada/saída de estoque -->
+  <dialog id="modalEstoque">
+    <form id="formEstoque" novalidate>
+      <h2>Movimentar estoque</h2>
+      <p class="info" id="estoqueProduto"></p>
+      <p class="erro-form"></p>
+
+      <div class="form-grid">
+        <label>Tipo
+          <select name="tipo">
+            <option value="entrada">Entrada (compra / reposição)</option>
+            <option value="saida">Saída (perda, quebra, vencido)</option>
+          </select>
+        </label>
+        <label>Quantidade
+          <input name="quantidade" type="number" step="0.001" min="0" required>
+        </label>
+      </div>
+      <label>Observação
+        <input name="observacao" maxlength="100" placeholder="ex: NF 1234, fornecedor...">
+      </label>
+
+      <div class="acoes">
+        <button type="button" class="btn secundario" data-fechar>Fechar</button>
+        <button type="submit" class="btn">Confirmar</button>
+      </div>
+
+      <h3 style="margin-top: 20px">Últimas movimentações</h3>
+      <div class="rolagem">
+        <table class="tabela compacta">
+          <tbody id="historicoMovimentacoes"></tbody>
+        </table>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/util.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/produtos.js"></script>
+</body>
+</html>

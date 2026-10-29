@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="24" fill="#ecf8ef"/>
+  <rect x="88" y="26" width="24" height="10" rx="3" fill="#ffffff" stroke="#9ccfaa" stroke-width="2"/>
+  <path d="M90 36 h20 v14 q22 10 22 36 v80 a10 10 0 0 1 -10 10 h-44 a10 10 0 0 1 -10 -10 v-80 q0 -26 22 -36z" fill="#7bd389" opacity=".9"/>
+  <path d="M74 100 h52 v44 h-52z" fill="#ffffff" opacity=".85"/>
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2e7d32" text-anchor="middle">DETERGENTE</text>
+  <text x="100" y="136" font-family="Arial, sans-serif" font-size="10" fill="#4f8f5c" text-anchor="middle">neutro 500ml</text>
+  <path d="M80 70 q-4 20 0 30" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+  <circle cx="146" cy="58" r="8" fill="none" stroke="#9ccfaa" stroke-width="2"/>
+  <circle cx="158" cy="78" r="5" fill="none" stroke="#9ccfaa" stroke-width="2"/>
+</svg>

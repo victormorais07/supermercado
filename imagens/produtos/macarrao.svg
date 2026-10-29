@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="24" fill="#eef3fb"/>
+  <rect x="62" y="28" width="76" height="148" rx="6" fill="#1e4f9c"/>
+  <rect x="72" y="48" width="56" height="84" rx="4" fill="#fff6d6"/>
+  <g stroke="#f2c14e" stroke-width="3" stroke-linecap="round">
+    <line x1="80" y1="52" x2="80" y2="128"/>
+    <line x1="88" y1="52" x2="88" y2="128"/>
+    <line x1="96" y1="52" x2="96" y2="128"/>
+    <line x1="104" y1="52" x2="104" y2="128"/>
+    <line x1="112" y1="52" x2="112" y2="128"/>
+    <line x1="120" y1="52" x2="120" y2="128"/>
+  </g>
+  <text x="100" y="152" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">ESPAGUETE</text>
+  <text x="100" y="166" font-family="Arial, sans-serif" font-size="10" fill="#b9cbea" text-anchor="middle">500g</text>
+</svg>
